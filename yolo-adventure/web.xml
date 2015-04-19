@@ -1,0 +1,23 @@
+<servlet>
+	<servlet-name>SpringServlet</servlet-name>
+	<servlet-class>org.springframework.web.servlet.DispatcherServlet
+	</servlet-class>
+	<init-param>
+		<param-name>contextClass</param-name>
+		<param-value>org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+		</param-value>
+	</init-param>
+	<init-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			info.smartkit.yolo_adventure.AppConfig, info.smartkit.yolo_adventure.WebAppConfig,
+			info.smartkit.yolo_adventure.WebSocketAppConfig
+		</param-value>
+	</init-param>
+	<async-supported>true</async-supported>
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>SpringServlet</servlet-name>
+	<url-pattern>/</url-pattern>
+</servlet-mapping>
